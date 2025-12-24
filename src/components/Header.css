@@ -1,0 +1,171 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  background: radial-gradient(circle 200px at 0% 0%, rgba(255, 255, 255, 0.1), #0c0d0d);
+  z-index: 1000;
+  box-sizing: border-box;
+  overflow: visible; /* Changed from hidden to allow button glow to show */
+}
+
+.header-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden; /* Keep dots inside */
+}
+
+.dot {
+  width: 6px; 
+  aspect-ratio: 1;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 
+    0 0 15px #ffffff,
+    0 0 30px rgba(0, 255, 255, 0.8);
+  border-radius: 50%;
+  animation: moveDot 8s linear infinite;
+  z-index: 1;
+}
+
+@keyframes moveDot {
+  0% { top: -3px; left: -3px; }
+  25% { top: -3px; left: calc(100% - 3px); }
+  50% { top: calc(100% - 3px); left: calc(100% - 3px); }
+  75% { top: calc(100% - 3px); left: -3px; }
+  100% { top: -3px; left: -3px; }
+}
+
+.header-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.header-name {
+  font-size: 2.2rem;
+  font-weight: 900;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ffffff, #00ffff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 
+    0 0 20px rgba(0, 255, 255, 0.3),
+    0 0 40px rgba(255, 0, 255, 0.2);
+  letter-spacing: 1px;
+  position: relative;
+  display: inline-block;
+  filter: brightness(1.2);
+}
+
+.header-name::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #00ffff, transparent);
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* --- NEW BUTTON STYLES (Adapted from Uiverse) --- */
+.header-nav {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.button {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  
+  /* SIZE ADJUSTMENT FOR HEADER */
+  font-size: 0.9rem; /* Reduced from 20px */
+  padding: 8px 16px; /* Reduced from 15px 30px */
+  
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  background-color: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.button span {
+  background: linear-gradient(-45deg, #63A4FF 0%, #83EAF1 100% );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.6s ease;
+}
+
+.button:hover span {
+  -webkit-text-fill-color: white;
+}
+
+.button::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: scaleY(2);
+  border: 2px solid; /* Reduced border thickness slightly */
+  border-image: linear-gradient(-45deg, #63A4FF 0%, #83EAF1 100% );
+  border-image-slice: 1;
+  border-width: 2px 0 2px 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: -1;
+}
+
+.button:hover::before {
+  transform: scaleY(0); /* Closes in */
+  opacity: 1;
+}
+
+.button::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(-45deg, #63A4FF 0%, #83EAF1 100% );
+  transform: scale(0);
+  pointer-events: none;
+  transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  z-index: -1;
+}
+
+.button:hover::after {
+  transform: scaleY(1);
+}
+
+.button:active {
+  scale: 0.90;
+}

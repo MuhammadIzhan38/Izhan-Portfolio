@@ -1,0 +1,27 @@
+/* src/components/ProjectFilters.css */
+.filter-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 40px;
+}
+
+.filter-btn {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: white;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  backdrop-filter: blur(5px);
+}
+
+.filter-btn:hover, .filter-btn.active {
+  background: linear-gradient(90deg, #00f260, #0575e6); /* Cyan/Blue gradient */
+  border-color: transparent;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 242, 96, 0.4);
+}

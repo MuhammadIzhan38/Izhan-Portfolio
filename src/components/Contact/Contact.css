@@ -1,0 +1,267 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap');
+
+
+.cli-theme {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  color: #e0e0e0;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+
+.glass-panel {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 255, 65, 0.8);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+}
+
+
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 65, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.neon-text:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+  }
+}
+*/
+
+
+
+/*
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap');
+
+
+.cli-theme {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  color: #e0e0e0;
+  width: 100%;
+  padding: 2rem 1rem; 
+}
+
+
+.glass-panel {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+  border-radius: 12px;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  margin: 0 auto; 
+  max-width: 100%; 
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 255, 65, 0.8);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+}
+
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 65, 0.5);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 100%; 
+}
+
+.neon-text:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .glass-panel {
+    margin: 0;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr;
+    padding: 0 0.5rem; 
+  }
+  
+  .glass-panel {
+    padding: 1.5rem;
+    margin: 0 0.5rem;
+  }
+}
+
+
+.contact-header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3rem;
+}
+
+.contact-title {
+  font-size: 3rem; 
+  font-weight: 800; 
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+}
+  */
+
+
+
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;600&display=swap');
+
+/* Base Animation & Font Settings */
+.cli-theme {
+  font-family: 'Fira Code', 'Courier New', monospace;
+  color: #e0e0e0;
+  width: 100%;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* Container for entire contact section */
+.contact-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  box-sizing: border-box;
+}
+
+/* Glass Panel Container */
+.glass-panel {
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 255, 65, 0.3);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.glass-panel:hover {
+  border-color: rgba(0, 255, 65, 0.8);
+  box-shadow: 0 0 30px rgba(0, 255, 65, 0.2);
+}
+
+/* Text Effects */
+.neon-text {
+  color: #fff;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.5), 0 0 10px rgba(0, 255, 65, 0.5);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.neon-text:hover {
+  transform: scale(1.02);
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.8), 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  .grid-layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+  .glass-panel {
+    padding: 2rem;
+  }
+}
+
+/* Contact heading section */
+.contact-header {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 0 1rem;
+}
+
+.contact-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.2rem;
+  }
+  
+  .glass-panel {
+    margin: 0;
+    padding: 1.2rem;
+  }
+  
+  .contact-header {
+    margin-bottom: 2rem;
+  }
+}

@@ -1,0 +1,33 @@
+
+#root {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: none;
+  text-align: left;
+}
+
+.app {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

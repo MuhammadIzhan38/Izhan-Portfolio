@@ -1,0 +1,248 @@
+.about-section {
+  box-sizing: border-box;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  /* Transparent so the shared 3D background shows through */
+  background-color: transparent; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; 
+  padding: 50px 20px;
+}
+
+/* --- Layout Wrapper (UPDATED FOR ALIGNMENT) --- */
+.about-content-wrapper {
+  position: relative;
+  z-index: 2; 
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  
+  /* THIS PUSHES CONTENT TO LEFT AND RIGHT EDGES */
+  justify-content: space-between; 
+  
+  width: 100%;
+  max-width: 1400px; /* Increased width to allow spreading */
+  gap: 2rem; 
+  padding: 0 50px; /* Added padding so it doesn't touch the screen edge */
+}
+
+/* --- Left Side (Water Drop Card) --- */
+.left-details {
+  flex: 1; 
+  display: flex;
+  
+  /* CHANGED: Aligns the card to the LEFT */
+  justify-content: flex-start; 
+  
+  min-width: 300px;
+}
+
+/* From Uiverse.io by escannord (Modified) */
+.card {
+  width: 100%;
+  max-width: 550px; 
+  height: auto;
+  min-height: 350px; 
+  
+  background-color: rgba(0, 0, 0, 0.7); 
+  box-shadow: inset 10px 10px 10px 10px rgba(8, 7, 7, 0.342),
+    inset 20px 20px 20px 20px rgba(8, 7, 7, 0.1),
+    10px 10px 20px rgba(0, 0, 0, 0.425),
+    inset -10px -10px 10px 10px rgba(41, 40, 40, 0.568),
+    inset -20px -20px 20px 20px rgba(41, 40, 40, 0.568);
+  
+  border-radius: 51% 49% 62% 38% / 25% 57% 43% 75%;
+  
+  position: relative;
+  padding: 3rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 40px rgba(0, 255, 255, 0.1);
+  transform: translateY(-5px);
+}
+
+.card::after {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.329);
+  box-shadow: 0 0 50px rgb(226, 226, 226);
+  border-radius: 80% 20% 91% 9% / 48% 67% 33% 52%;
+  top: 50px;
+  left: 40px;
+}
+
+.card::before {
+  content: "";
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.315);
+  box-shadow: 0 0 50px rgb(255, 255, 255);
+  border-radius: 48% 52% 45% 55% / 48% 67% 33% 52%;
+  top: 40px;
+  left: 60px;
+}
+
+
+/* --- Right Side (Resume Button) --- */
+.right-action {
+  flex: 1;
+  display: flex;
+  
+  /* CHANGED: Aligns the button to the RIGHT */
+  justify-content: flex-end; 
+  
+  align-items: center;
+  min-width: 250px;
+}
+
+/* Renamed class to prevent Header conflict */
+.resume-button {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border: none;
+  width: 200px;
+  height: 60px;
+  
+  /* Shiny Dark Background base */
+  background: radial-gradient(circle at center, #1a1a1a 0%, #000000 100%);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  font-family: inherit;
+  font-size: 1.1rem;
+  font-weight: bold;
+  
+  /* Initial Crystal Text */
+  color: #e0f7fa;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.resume-button:active {
+  transform: scale(0.98);
+}
+
+.resume-button:hover {
+  /* Shiny Cyan/White Glow instead of Purple */
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.4), 
+              inset 0 0 20px rgba(255, 255, 255, 0.1);
+  border-color: rgba(0, 255, 255, 0.5);
+  
+  /* Text Super Shine */
+  color: #ffffff;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 1), 
+               0 0 20px rgba(0, 255, 255, 0.8), 
+               0 0 40px rgba(0, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Shine animation overlay */
+.resume-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: 0.5s;
+}
+
+.resume-button:hover::before {
+  left: 100%;
+}
+
+
+/* --- Crystal Text Styling --- */
+.text-content {
+  text-align: left;
+  z-index: 5;
+}
+
+.crystal-text {
+  color: #e0f7fa; 
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.3), 0 0 20px rgba(0, 255, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+.crystal-text:hover {
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 30px rgba(0, 255, 255, 0.6);
+  color: #fff;
+  transform: scale(1.02);
+}
+
+.about-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #ffffff 0%, #a5d8ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  text-shadow: none; 
+  filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+}
+
+.about-subtitle {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+  color: #00ffff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.about-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+.about-bio strong {
+  color: #00ffff;
+  font-weight: 600;
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 900px) {
+  .about-content-wrapper {
+    flex-direction: column; /* Stacks vertically on mobile */
+    justify-content: center; /* Center on mobile */
+    gap: 3rem;
+  }
+  
+  .left-details {
+    width: 100%;
+    order: 1; 
+    justify-content: center; /* Center card on mobile */
+  }
+  
+  .right-action {
+    order: 2; 
+    justify-content: center; /* Center button on mobile */
+    width: 100%;
+  }
+
+  .about-title {
+    font-size: 2rem;
+  }
+}

@@ -1,0 +1,82 @@
+/* src/pages/ProjectsPage.css */
+.projects-page {
+  padding: 50px 5%;
+  min-height: 100vh;
+  /* Background is transparent as requested, assumes generic 3D bg is behind */
+  background: transparent; 
+  color: white;
+}
+
+/*.main-heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease;
+  text-transform: uppercase;
+}
+
+.main-heading:hover {
+  text-shadow: 0 0 20px #fff, 0 0 40px #00f260;
+}*/
+
+
+
+.main-heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  animation: fadeInDown 1s ease;
+  text-transform: uppercase;
+  
+  /* Base Style: Fast transition out (0.05s) */
+  color: #fff;
+  text-shadow: none; 
+  transition: color 0.05s ease-out, text-shadow 0.05s ease-out;
+  cursor: pointer;
+}
+
+.main-heading:hover {
+  /* Hover Style: Slow transition in (0.4s) */
+  transition: color 0.4s ease-in, text-shadow 0.4s ease-in;
+  
+  color: #A0FFC0; /* Very light green text */
+  /* Light, shiny glow effect */
+  text-shadow: 
+    0 0 15px #A0FFC0,
+    0 0 30px #A0FFC0,
+    0 0 50px rgba(160, 255, 192, 0.6);
+}
+
+.sub-heading {
+  font-size: 1.5rem;
+  margin: 40px 0 20px;
+  border-left: 5px solid #00f260;
+  padding-left: 15px;
+}
+
+/* Grid Logic */
+.grid-advance {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 per row */
+  gap: 30px;
+}
+
+.grid-normal {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row */
+  gap: 30px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .grid-advance, .grid-normal {
+    grid-template-columns: 1fr; /* Stack on mobile */
+  }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}

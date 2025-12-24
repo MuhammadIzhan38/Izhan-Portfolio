@@ -1,0 +1,169 @@
+/* src/components/SkillsSection.css */
+/*.skills-container {
+  margin-top: 80px;
+  text-align: center;
+  color: white;
+}
+
+.skills-heading {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  background: -webkit-linear-gradient(#eee, #333);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+.tech-list ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tech-list li {
+  background: rgba(255,255,255,0.05);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.logo-group {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: rgba(0,0,0,0.5);
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #333;
+}
+
+.arrow { font-size: 1.5rem; color: #555; }
+.skill-icon { font-size: 3rem; transition: 0.3s; }
+.skill-icon:hover { transform: scale(1.2); filter: drop-shadow(0 0 8px rgba(255,255,255,0.5)); }
+*/
+
+
+
+
+/* src/components/SkillsSection.css */
+.skills-container {
+  margin-top: 80px;
+  text-align: center;
+  color: white;
+}
+
+/* --- 1. SKILLS HEADING (Cyber Glow + Transition) --- */
+.skills-heading {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  font-weight: bold;
+  
+  /* Resetting the linear gradient from original file */
+  background: none; 
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+
+  /* Base Style: Fast transition out (0.05s) */
+  color: #fff;
+  text-shadow: none; 
+  transition: color 0.05s ease-out, text-shadow 0.05s ease-out;
+  cursor: pointer;
+}
+
+.skills-heading:hover {
+  /* Hover Style: Slow transition in (0.4s) */
+  transition: color 0.4s ease-in, text-shadow 0.4s ease-in;
+  
+  color: #A0FFC0; /* Very light green text */
+  /* Light, shiny glow effect */
+  text-shadow: 
+    0 0 10px #A0FFC0,
+    0 0 20px #A0FFC0,
+    0 0 30px rgba(160, 255, 192, 0.5);
+}
+
+.tech-list ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 0;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tech-list li {
+  background: rgba(255,255,255,0.05);
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.1);
+  /* Added cyber color highlight for list items */
+  color: #A0FFC0;
+  box-shadow: 0 0 5px rgba(160, 255, 192, 0.2);
+}
+
+/* --- 2. NEW LOGO HIERARCHY STYLES --- */
+.logo-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.logo-group-cyber {
+  /* Creative Cyber Container Style */
+  background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+  border: 1px solid rgba(160, 255, 192, 0.2); 
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 0 15px rgba(0, 255, 136, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: 0.3s;
+}
+
+.parent-skill {
+  font-size: 3.5rem; /* Larger logo */
+  margin-bottom: 15px;
+  color: #fff; 
+  transition: 0.3s;
+}
+
+.child-skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(160, 255, 192, 0.1); /* Subtle separator */
+}
+
+.child-skill {
+  font-size: 2rem; /* Smaller logo */
+  color: #ccc;
+}
+
+/* Global Icon Hover Effect (applies to both parent and child) */
+.skill-icon-hover {
+  transition: 0.3s;
+  cursor: pointer;
+}
+.skill-icon-hover:hover { 
+  transform: scale(1.2); 
+  color: #A0FFC0; /* Icon color change */
+  /* Lighter, shiner glow on icons */
+  filter: drop-shadow(0 0 10px #A0FFC0) drop-shadow(0 0 15px rgba(160, 255, 192, 0.6));
+}

@@ -1,0 +1,123 @@
+
+.home-container {
+  background-color: #001d14;
+  min-height: 100vh;
+  width: 100vw; /* Forces full viewport width */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 80px; /* Pushes content down so it's not hidden behind the Header */
+  box-sizing: border-box; 
+  position: relative;
+}
+
+.home-content {
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  padding: 0 20px;
+}
+
+/* Shiny Silver Text Styles */
+.home-headline,
+.home-subheading,
+.name-highlight,
+.digital-highlight,
+.benefit-text {
+  color: transparent;
+  background: linear-gradient(90deg, #c0c0c0, #ffffff, #c0c0c0, #e8e8e8);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  animation: shine 3s ease-in-out infinite alternate;
+  text-shadow: 0 0 20px rgba(192, 192, 192, 0.3);
+  transition: all 0.5s ease;
+}
+
+.home-headline {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  letter-spacing: 2px;
+}
+
+.home-subheading {
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 3rem;
+  line-height: 1.4;
+}
+
+.benefit-text {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.9;
+}
+
+/* Hover effects for all text */
+.home-headline:hover,
+.home-subheading:hover,
+.name-highlight:hover,
+.digital-highlight:hover,
+.benefit-text:hover {
+  animation-duration: 1s;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+  transform: scale(1.02);
+}
+
+/* Shine animation */
+@keyframes shine {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Your provided button styles - adapted for portfolio-btn class */
+.portfolio-btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.portfolio-btn:active {
+  scale: 0.92;
+}
+
+.portfolio-btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .home-headline {
+    font-size: 2.5rem;
+  }
+  
+  .home-subheading {
+    font-size: 1.5rem;
+  }
+  
+  .benefit-text {
+    font-size: 1.2rem;
+  }
+  
+  .portfolio-btn {
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+  }
+}
